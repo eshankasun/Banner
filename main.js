@@ -2,30 +2,30 @@ var bannerStatus = 1;
 var bannerTimer = 4000;
 
 // on  load function for banner//
-window.onload = function() {
+window.onload = () => {
   bannerLoop();
 };
 
-var startBannerLoop = setInterval(function() {
+var startBannerLoop = setInterval(() => {
   bannerLoop();
 }, bannerTimer);
 
 //mouse over pause//
 
-document.getElementById("main-banner").onmouseenter = function() {
+document.getElementById("main-banner").onmouseenter = () => {
   clearInterval(startBannerLoop);
 };
 
 //mouse leave continue//
-document.getElementById("main-banner").onmouseleave = function() {
-  startBannerLoop = setInterval(function() {
+document.getElementById("main-banner").onmouseleave = () => {
+  startBannerLoop = setInterval(() => {
     bannerLoop();
   }, bannerTimer);
 };
 
 //previous button !not working in  order???//
 
-document.getElementById("imgbanbtn-prev").onclick = function() {
+document.getElementById("imgbanbtn-prev").onclick = () => {
   if (bannerStatus === 1) {
     bannerStatus = 4;
   } else if (bannerStatus === 2) {
@@ -54,7 +54,7 @@ function prev() {
   bannerLoop();
 }
 // next button
-document.getElementById("imgbanbtn-next").onclick = function() {
+document.getElementById("imgbanbtn-next").onclick = function () {
   bannerLoop();
 };
 
@@ -77,7 +77,7 @@ function bannerLoop() {
     // document.getElementById("imgban3").style.opacity = "0";
     // document.getElementById("imgban4").style.opacity = "0";
     // document.getElementById("imgban5").style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban1").style.right = "0px";
       document.getElementById("imgban1").style.zIndex = "1000";
       document.getElementById("imgban2").style.right = "-1200px";
@@ -89,7 +89,7 @@ function bannerLoop() {
       document.getElementById("imgban5").style.right = "1200px";
       document.getElementById("imgban5").style.zIndex = "500";
     }, 0);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban2").style.opacity = "1";
       // document.getElementById("imgban3").style.opacity = "1";
       // document.getElementById("imgban4").style.opacity = "1";
@@ -101,7 +101,7 @@ function bannerLoop() {
     // document.getElementById("imgban4").style.opacity = "0";
     // document.getElementById("imgban5").style.opacity = "0";
     // document.getElementById("imgban1").style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban2").style.right = "0px";
       document.getElementById("imgban2").style.zIndex = "1000";
       document.getElementById("imgban3").style.right = "-1200px";
@@ -113,7 +113,7 @@ function bannerLoop() {
       document.getElementById("imgban1").style.right = "1200px";
       document.getElementById("imgban1").style.zIndex = "500";
     }, 0);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban3").style.opacity = "1";
       // document.getElementById("imgban4").style.opacity = "1";
       // document.getElementById("imgban5").style.opacity = "1";
@@ -125,7 +125,7 @@ function bannerLoop() {
     // document.getElementById("imgban5").style.opacity = "0";
     // document.getElementById("imgban1").style.opacity = "0";
     // document.getElementById("imgban2").style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban3").style.right = "0px";
       document.getElementById("imgban3").style.zIndex = "1000";
       document.getElementById("imgban4").style.right = "-1200px";
@@ -137,7 +137,7 @@ function bannerLoop() {
       document.getElementById("imgban2").style.right = "1200px";
       document.getElementById("imgban2").style.zIndex = "500";
     }, 0);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban4").style.opacity = "1";
       // document.getElementById("imgban5").style.opacity = "1";
       // document.getElementById("imgban1").style.opacity = "1";
@@ -149,7 +149,7 @@ function bannerLoop() {
     // document.getElementById("imgban1").style.opacity = "0";
     // document.getElementById("imgban2").style.opacity = "0";
     // document.getElementById("imgban3").style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban4").style.right = "0px";
       document.getElementById("imgban4").style.zIndex = "1000";
       document.getElementById("imgban5").style.right = "-1200px";
@@ -161,7 +161,7 @@ function bannerLoop() {
       document.getElementById("imgban3").style.right = "1200px";
       document.getElementById("imgban3").style.zIndex = "500";
     }, 0);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban5").style.opacity = "1";
       // document.getElementById("imgban1").style.opacity = "1";
       // document.getElementById("imgban2").style.opacity = "1";
@@ -173,7 +173,7 @@ function bannerLoop() {
     // document.getElementById("imgban2").style.opacity = "0";
     // document.getElementById("imgban3").style.opacity = "0";
     // document.getElementById("imgban4").style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban5").style.right = "0px";
       document.getElementById("imgban5").style.zIndex = "1000";
       document.getElementById("imgban1").style.right = "-1200px";
@@ -185,7 +185,7 @@ function bannerLoop() {
       document.getElementById("imgban4").style.right = "1200px";
       document.getElementById("imgban4").style.zIndex = "500";
     }, 0);
-    setTimeout(function() {
+    setTimeout(function () {
       document.getElementById("imgban1").style.opacity = "1";
       // document.getElementById("imgban2").style.opacity = "1";
       // document.getElementById("imgban3").style.opacity = "1";

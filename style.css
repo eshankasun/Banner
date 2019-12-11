@@ -8,6 +8,13 @@ body {
 
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .main-banner {
     margin: 0 auto;
     width: 1200px;
